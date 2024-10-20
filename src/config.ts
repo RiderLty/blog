@@ -72,9 +72,11 @@ export const profileConfig: ProfileConfig = {
       name: 'BiliBili',
       icon: 'fa6-brands:bilibili',
       url: 'https://space.bilibili.com/2876179',
+    },{
+      name: 'mail',
+      icon: 'material-symbols:mail-outline-rounded',
+      url: 'mailto:lty6531600@outlook.com',
     },
-
-
   ],
 }
 
