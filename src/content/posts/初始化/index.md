@@ -1,8 +1,8 @@
 ---
 title: 初始化
-published: 2024-10-18
+published: 2024-10-17
 description: '关于此博客'
-image: "./cover.jpeg"
+image: "./cover.jpg"
 tags: [blog,markdown,vscode]
 category: '网站相关'
 draft: false 
