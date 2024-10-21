@@ -13,14 +13,14 @@ lang: ''
 
 [tailscale](https://tailscale.com/) 可以很方便搭建起一个虚拟局域网，但是需要每台机器都安装tailscale，且需要使用虚拟局域网的IP才能互相访问。
 
-特别是安卓，无法在wifi下获取IPV6，只能用移动数据才能直连。
+特别是安卓，无法在wifi下获取IPV6，只有用移动数据才能直连。
 
 本文讨论通过软路由实现无感的异地组网，实现多个不同局域网下的设备无需安装tailscale直接使用内网IP跨网段互相访问。
 
 :::note[注意事项]
-tailscale是一款处于更新中的软件，本文写于2024-10-18
+tailscale是一款处于更新中的软件，本文部分信息可能已过时
 
-路由器为 iStoreOS 22.03.5 2023121510，tailscale版本为1.32.3-1 (OpenWrt)
+本文中使用的路由器版本为 iStoreOS 22.03.5 2023121510，tailscale版本为 1.32.3-1 (OpenWrt)
 :::
 
 修改路由器的LAN网段，确保不冲突，如：192.168.3.0/24 ; 192.168.7.0/24。
@@ -41,6 +41,6 @@ tailscale up --accept-routes --advertise-exit-node --advertise-routes=192.168.3.
 
 在所有路由器上操作后，在路由器下的设备即可通过内网IP直接访问不同网段的局域网设备。
 
-```--advertise-exit-node```为开启
+```--advertise-exit-node```为开启出口节点，可选则是否开启。
 
 ![ping](ping.png)
