@@ -2,13 +2,13 @@
 title: 为内网应用添加域名
 published: 2024-10-20
 description: ''
-image: 'cover.png'
+image: 'cover.jpg'
 tags: [openwrt,host,dnsmasp,nginx]
 category: 'NAS'
 draft: false 
 lang: ''
 ---
-
+![nav](nav.png)
 如果你和我一样，内网部署了一堆应用，但是又经常懒得再从导航页跳转
 
 那么你可以通过.local域名来访问你的网页应用。
@@ -73,3 +73,5 @@ server {
 从此域名直达，再也不用记端口 ✌️
 
 在异地组网的情况下依然适用，只需要在电脑或者路由器上有对应的host条目即可。 ~~其实是我整不明白DNS~~
+
+在这里放一个适用于unraid的自动创建配置文件并应用的脚本供参考：[make.nas.local.py](https://gist.github.com/RiderLty/9b982367ad7c0f682a01eafd1ecdce7e)

@@ -11,9 +11,9 @@ lang: ''
 
 ::github{repo="tailscale/tailscale"}
 
-[tailscale](https://tailscale.com/) 可以很方便搭建起一个虚拟局域网，但是需要每台机器都安装tailscale，且需要使用虚拟局域网的IP才能互相访问。
+[tailscale](https://tailscale.com/) 可以很方便搭建起一个虚拟局域网，但是需要安装在每一台机器，且需要使用虚拟局域网的IP才能互相访问。
 
-特别是安卓，无法在wifi下获取IPV6，只有用移动数据才能直连。
+而安卓又无法在wifi下获取IPV6，只有用移动数据才能实现直连。
 
 本文讨论通过软路由实现无感的异地组网，实现多个不同局域网下的设备无需安装tailscale直接使用内网IP跨网段互相访问。
 
@@ -35,12 +35,12 @@ opkg update && opkg install tailscale
 tailscale up --accept-routes --advertise-exit-node --advertise-routes=192.168.3.0/24
 ```
 
-其中```--accept-routes```表示接受作为子网路由器的节点的通告路由。
+```--accept-routes``` 接受其他节点通告的子网路由。
 
-将```--advertise-routes=192.168.3.0/24```中通告的网段换为本路由器的LAN网段。
+```--advertise-exit-node``` 开启出口节点，可以让其他设备都通过本设备访问网络，可选则是否开启。
 
-在所有路由器上操作后，在路由器下的设备即可通过内网IP直接访问不同网段的局域网设备。
+```--advertise-routes=192.168.3.0/24``` 通告192.168.3.0/24网段通过本设备访问，根据路由器实际LAN网段修改。
 
-```--advertise-exit-node```为开启出口节点，可选则是否开启。
+在所有路由器上操作完成后，任一路由器下的设备都可通过内网IP直接访问不同网段的局域网设备。
 
 ![ping](ping.png)
