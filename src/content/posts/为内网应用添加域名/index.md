@@ -1,7 +1,7 @@
 ---
 title: 为内网应用添加域名
 published: 2024-10-20
-description: ''
+description: '为内网应用添加自定义域名'
 image: 'cover.jpg'
 tags: [openwrt,host,dnsmasp,nginx]
 category: 'NAS'
