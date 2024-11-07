@@ -84,7 +84,7 @@ async def proxy_pass(request: Request, response: Response):
         return Response(content=serverResponse.content)
 ```
 
-## 部署过程
+## 部署
 
 见github：[快速开始](https://github.com/RiderLty/fontinass?tab=readme-ov-file#%E5%BF%AB%E9%80%9F%E5%BC%80%E5%A7%8B)
 
