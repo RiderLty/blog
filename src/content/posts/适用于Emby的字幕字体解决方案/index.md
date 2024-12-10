@@ -14,7 +14,7 @@ Emby本质只是一个媒体服务器而不是播放器，所以视频还是在�
 
 曾经我也是下载了Fonts.7z就直接删除的，直到遇见了一些番剧字幕显示明显不对才意识到可能是字体到的问题。
 
-目前最好的解决方案是将字幕和字体都封入MKV容器，例如喵萌奶茶屋&LoliHouse的《败犬女主太多了！》：
+目前最好的解决方案是将字幕和字体都封入MKV容器，目前有很多字幕组都是这么做的：
 
 ![MKVTOOLNIX01](MKVTOOLNIX01.png)
 
@@ -54,35 +54,23 @@ python程序根据url先去请求原始字幕文件，然后进行字体的子�
 async def proxy_pass(request: Request, response: Response):
     try:
         host = os.environ.get("EMBY_SERVER_URL") or EMBY_SERVER_URL
-        url = (
-            f"{request.url.path}?{request.url.query}"
-            if request.url.query
-            else request.url.path
-        )
+        url = f"{request.url.path}?{request.url.query}"
         embyRequestUrl = host + url
         logger.info(f"字幕URL:{embyRequestUrl}")
-        serverResponse = requests.get(url=embyRequestUrl, headers=request.headers)
-        copyHeaders = {key: str(value) for key, value in response.headers.items()}
-    except Exception as e:
-        info = f"fontinass获取原始字幕出错:{str(e)}"
-        logger.error(info)
-        return info
-    try:
-        logger.info(f"原始大小:{len(serverResponse.content)}")
-        srt, bytes = process(serverResponse.content)
-        logger.info(f"处理后大小:{len(bytes)}")
-        copyHeaders["Content-Length"] = str(len(bytes))
-        if srt:
-            if (
-                "user-agent" in request.headers
-                and "infuse" in request.headers["user-agent"].lower()
-            ):
-                raise ValueError("infuse客户端，无法使用SRT转ASS功能，返回原始字幕")
+        serverResponse = await requests.get(url=embyRequestUrl, headers=request.headers)
+        bytes = process(serverResponse.content)
         return Response(content=bytes)
     except Exception as e:
         logger.error(f"处理出错，返回原始内容 : \n{traceback.format_exc()}")
         return Response(content=serverResponse.content)
 ```
+
+* 字体的匹配，参考mpv播放器中使用的libass的字体匹配逻辑，需要用到fontName，Bold，Italic三个信息。
+
+* 某些字体Bold，weight声明不规范，可能会导致错误的匹配结果。
+
+* 特别感谢[mcratt](https://github.com/mcratt)的PR！将字体子集化从fonttools切换为harfubzz，以及大量的改进工作，极大提升了程序运行效率。
+
 
 ## 部署
 
