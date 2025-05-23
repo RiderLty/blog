@@ -111,6 +111,8 @@ status=progress用于显示进度，在软件包里搜```coreutils-dd```
 :::
 ## 手机备份
 
+termux推荐从F-droid下载而不是GooglePlay [F-Droid:Termux](https://f-droid.org/zh_Hans/packages/com.termux/)
+
 termux本体的设置，通过tar压缩后备份到NAS。
 
 一般是进行了什么大改动后手动备份。
@@ -251,6 +253,22 @@ if __name__ == "__main__":
         print(f'\n$: rclone copy "{src}" "{dst}" -v --transfers=16')
         os.system(f'rclone copy "{src}" "{dst}" -v --transfers=16')
 ```
+
+安装[termux-tasker](https://f-droid.org/zh_Hans/packages/com.termux.tasker/)，即可被外部脚本调用。
+
+### Macrodroid
+
+首先需要授予Macrodroid调用termux-tasker的权限，某些国产UI（比如MIUI，需要在开发者选项里关闭系统优化），需要特殊设置才能在权限管理看到此选项。
+
+![alt text](Screenshot_2025-05-23-08-43-34-949_com.android.pe.jpg)
+
+添加脚本，在动作中搜索tasker即可。
+
+如果无法正常运行，检查以下条件：
+ * 授予 termux、termux-tasker 自启动权限。
+ * 关闭 termux、termux-tasker 电池优化
+
+
 
 :::tip
 没事干多截屏，桌面、快捷栏、app列表、主题设置...
