@@ -254,7 +254,7 @@ if __name__ == "__main__":
         os.system(f'rclone copy "{src}" "{dst}" -v --transfers=16')
 ```
 
-安装[termux-tasker](https://f-droid.org/zh_Hans/packages/com.termux.tasker/)，即可被外部脚本调用。
+安装[termux-tasker](https://f-droid.org/zh_Hans/packages/com.termux.tasker/)，用于被外部程序调用。
 
 ### Macrodroid
 
@@ -264,9 +264,7 @@ if __name__ == "__main__":
 
 添加脚本，在动作中搜索tasker即可。
 
-如果无法正常运行，检查以下条件：
- * 授予 termux、termux-tasker 自启动权限。
- * 关闭 termux、termux-tasker 电池优化
+如果无法正常运行，检查是否授予 termux、termux-tasker 自启动权限以及关闭电池优化
 
 
 
