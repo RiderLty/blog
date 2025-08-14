@@ -75,3 +75,18 @@ server {
 在异地组网的情况下依然适用，只需要在电脑或者路由器上有对应的host条目即可。 ~~其实是我整不明白DNS~~
 
 在这里放一个适用于unraid的自动创建配置文件并应用的脚本供参考：[make.nas.local.py](https://gist.github.com/RiderLty/9b982367ad7c0f682a01eafd1ecdce7e)
+
+## 安卓用户注意！
+
+在使用过程中发现了一个奇怪的问题，我的所有设备，MAC，ipad，PC等等都可以正常使用本地域名，但是安卓手机却有一定概率会出现DNS_PROBE_FINISHED_NXDOMAIN 错误。
+
+后来了解到是手机内置了DNS，导致没有使用路由器的解析。整个一个大无语。
+
+[小米9故意内置隐藏的114DNS污染了路由器海外DNS解析结果 #712
+](https://github.com/pymumu/smartdns/issues/712)
+
+解决方案是劫持所有DNS请求都转发到自己：
+```
+iptables -t nat -A PREROUTING -p udp --dport 53 -j REDIRECT --to-ports 53
+iptables -t nat -A PREROUTING -p tcp --dport 53 -j REDIRECT --to-ports 53
+```
