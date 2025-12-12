@@ -26,12 +26,12 @@ Anytxt 支持通过关键词全盘搜索文件内容，而不是仅搜索文件�
 ## PDFshaper
 PDFshaper 是一个简单的 PDF 编辑器，它支持合并、拆分、旋转、压缩等操作。它是一个免费的工具，被广泛用于编辑 PDF 文件。
 - [官方网站](https://www.pdfshaper.com/)
-- [直接下载链接](https://www.pdfshaper.com/downloads/pdfshaper_free_15.4.exe)
+- [直接下载链接](https://1833788059.v.123pan.cn/1833788059/direct/%E5%B8%B8%E7%94%A8/PDFShaper-Ultimate-15.2.exe.zip)
 
 ## Acrobat
 Acrobat 是 Adobe 公司的 PDF 阅读器，它支持查看、打印、注释、填写表单等操作。
 - [官方网站](https://www.adobe.com/acrobat/pdf-reader.html)
-- [直接下载链接](blob:https://get.adobe.com/a5cd89e0-95d8-4706-96dd-66a5db7a1c74)
+- [直接下载链接](https://1833788059.v.123pan.cn/1833788059/direct/%E5%B8%B8%E7%94%A8/Acrobat-PRO-DC-2025.001.20566-x64-KpoJIuK.exe.zip)
 
 ## VimC
 VimC 是一个浏览器插件，它支持在浏览器中使用 Vim 键位操作。
@@ -46,12 +46,12 @@ Quicker是一款可以为任何常用内容建立捷径，让计算机自动工�
 ## PowerToys
 PowerToys 是微软公司的一个工具集，它提供了许多实用的功能，例如文件搜索、批量重命名、屏幕截图等。
 - [官方网站](https://learn.microsoft.com/zh-cn/windows/powertoys/)
-- [直接下载链接](https://github.com/microsoft/PowerToys/releases/download/v0.96.1/PowerToysSetup-0.96.1-x64.exe)
+- [直接下载链接](https://1833788059.v.123pan.cn/1833788059/direct/%E5%B8%B8%E7%94%A8/powertoysusersetup-0.96.1-x64.exe.zip)
 
 ## SpaceSniffer
 SpaceSniffer 是一个磁盘空间分析工具，它可以帮助您了解磁盘空间的使用情况，以及哪些文件和文件夹占用了最多的空间。
 - [官方网站](https://www.uderzo.it/main_products/space_sniffer/)
-- [直接下载链接](http://www.uderzo.it/main_products/space_sniffer/download.html)
+- [直接下载链接](https://1833788059.v.123pan.cn/1833788059/direct/%E5%B8%B8%E7%94%A8/spacesniffer_1_3_0_2.zip)
 
 ## no-defender
 no-defender 是一个简单的工具，它可以帮助您禁用 Windows Defender。
@@ -61,14 +61,14 @@ no-defender 是一个简单的工具，它可以帮助您禁用 Windows Defender
 ## Windows Update Blocker
 Windows Update Blocker 是一个简单的工具，它可以帮助您禁用 Windows 自动更新。
 - [官方网站](https://www.sordum.org/downloads/?st-windows-update-blocker)
-- [直接下载链接](https://www.sordum.org/files/downloads.php?st-windows-update-blocker)
+- [直接下载链接](https://1833788059.v.123pan.cn/1833788059/direct/%E5%B8%B8%E7%94%A8/Wub_x64.zip)
 
 ## CMWTAT_Digital_Edition
 GitHub 上最棒的开源 Win10/Win11 数字权利（数字许可证）激活工具！
 - [官方网站](https://github.com/TGSAN/CMWTAT_Digital_Edition)
-- [直接下载链接](https://github.com/TGSAN/CMWTAT_Digital_Edition/releases/download/2.7.2.0/CMWTAT_Digital_Release_2_7_2_0.exe)
+- [直接下载链接](https://1833788059.v.123pan.cn/1833788059/direct/%E5%B8%B8%E7%94%A8/CMWTAT_Digital_Release_2_7_2_0.zip)
 
 ## rclone
 rclone 是一个命令行工具，它可以帮助您在不同的云存储服务之间同步文件。
 - [官方网站](https://rclone.org/)
-- [直接下载链接](https://downloads.rclone.org/v1.72.0/rclone-v1.72.0-windows-amd64.zip)
+- [直接下载链接](https://1833788059.v.123pan.cn/1833788059/direct/%E5%B8%B8%E7%94%A8/rclone-v1.72.0-windows-amd64.zip)
