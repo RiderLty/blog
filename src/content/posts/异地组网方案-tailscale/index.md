@@ -1,5 +1,5 @@
 ---
-title: 异地组网方案
+title: 异地组网方案-tailscale
 published: 2024-10-18 
 description: '使用tailscale来异地组网'
 image: "./cover.jpg"
