@@ -130,6 +130,8 @@ ip地址，如```192.168.5.1/24```另一台```192.168.5.2/24```，组网的虚�
 
 如果在路由器上能ping通虚拟局域网和对方局域网的设备，但是本路由器下的设备无法ping通，检查tailscale是否设置了```--accept-routes=false```
 
+有时候重启路由器后，需要手动在路由器上重新运行tailscale up命令，并设置```--accept-routes=false```
+
 :::warning
 记得关闭Edge-Docker的端口映射
 :::
